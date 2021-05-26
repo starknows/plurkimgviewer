@@ -1,0 +1,36 @@
+.plurkIMG-popup-wrapper {
+  position: fixed;
+  border-radius: 15px;
+  background: transparent;
+  transition: all 0.3s;
+}
+.plurkIMG-popup-wrapper > img {
+  object-fit: scale-down;
+  transition: 1s;
+}
+.plurkIMG-place-left img {
+  object-position: left;
+}
+.plurkIMG-place-right img {
+  object-position: right;
+}
+.plurkIMG-place-left.notActive {
+  left: 0;
+  opacity: 0.5;
+  transform: translateX(-100%);
+}
+.plurkIMG-place-left.active {
+  left: 0;
+  transform: translateX(5%);
+  opacity: 1;
+}
+.plurkIMG-place-right.notActive {
+  right: 0;
+  opacity: 0.5;
+  transform: translateX(100%);
+}
+.plurkIMG-place-right.active {
+  right: 0;
+  transform: translateX(-5%);
+  opacity: 1;
+}

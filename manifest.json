@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Plurk IMG viewer",
+  "version": "0.2.1",
+  "description": "在Plurk中藉著滑鼠互動預覽高解析度的圖檔",
+  "background": {
+    "service_worker": "backgroundScript.js"
+  },
+  "permissions": ["storage", "tabs"],
+  "host_permissions": ["*://www.plurk.com/*"],
+  "action": {
+    "default_title": "噗浪圖片預覽器",
+    "default_popup": "popupMenu.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.plurk.com/*"],
+      "js": ["jquery-3.6.0.slim.min.js", "plurkImgContenScript.js"],
+      "css": ["plurkImgContenCss.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    { "resources": ["images/Loading.gif"], "matches": ["*://www.plurk.com/*"] }
+  ]
+}

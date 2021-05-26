@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style type="text/css">
+      body {
+        width: 250px;
+      }
+      p,
+      h2,
+      input {
+        text-align: center;
+      }
+      input {
+        padding: 5px 15px;
+        margin: 10px;
+        border-radius: 5px;
+        border: none;
+        box-shadow: 0 0 2px #666;
+        width: 30px;
+      }
+      .bar-wrapper {
+        margin: 15px;
+      }
+      .change-value-wrapper {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        box-shadow: 0 0 3px #666;
+        font-weight: bolder;
+        margin-top: -1px;
+        cursor: pointer;
+      }
+      .d-flex-all-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Plurk IMG viewer</h2>
+    <p>contact: starknows99@gmail.com</p>
+    <div class="bar-wrapper d-flex-all-center">
+      <div>寬度&emsp;</div>
+      <span
+        class="change-value-wrapper d-flex-all-center"
+        id="widthMinus"
+        data-action="minus"
+        data-target="width"
+        >＜</span
+      >
+      <input type="text" name="width" id="inputWidth" readonly />
+      <span
+        class="change-value-wrapper d-flex-all-center"
+        id="widthPlus"
+        data-action="plus"
+        data-target="width"
+        >＞</span
+      >
+    </div>
+    <div class="bar-wrapper d-flex-all-center">
+      <div>高度&emsp;</div>
+      <span
+        class="change-value-wrapper d-flex-all-center"
+        id="heightMinus"
+        data-action="minus"
+        data-target="height"
+        >＜</span
+      >
+      <input type="text" name="height" id="inputHeight" readonly />
+      <span
+        class="change-value-wrapper d-flex-all-center"
+        id="heightPlus"
+        data-action="plus"
+        data-target="height"
+        >＞</span
+      >
+    </div>
+    <script type="text/javascript" src="popup.js"></script>
+  </body>
+</html>
