@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Plurk IMG viewer",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "在Plurk中藉著滑鼠互動預覽高解析度的圖檔",
   "background": {
     "service_worker": "backgroundScript.js"

@@ -5,20 +5,26 @@
 ## 功能
 
 - 快速檢視河道圖片
+- 預覽範圍：
+  1. 使用者上傳到河道的圖片
+  2. twitter 貼文的附圖
+  3. Youtube 影片的自訂縮圖
 
 ## 待更新項目
 
 ---
 
-- 外網圖片預覽功能 (可從介面關閉)
-
-  - [youtube 參考](https://stackoverflow.com/questions/2068344/how-do-i-get-a-youtube-video-thumbnail-from-the-youtube-api)
-
-  - 0526:有時候無法開啟調整介面 >>已修復未上版本號
+- 使用者自訂 viewer 展開位置功能
+- 美化 popup 視窗
 
 ## 版本紀錄
 
 ---
+
+> v0.3.0 - 20210526
+
+- 修正 popup 視窗只在 install 執行一次之錯誤
+- 加入 twitter 與 youtube 預覽功能
 
 > v0.2.1 - 20210525
 
@@ -43,5 +49,5 @@
 
 ## 作者
 
-吳虛
+吳虛  
 starknows99@gmail.com
