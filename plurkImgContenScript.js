@@ -4,6 +4,7 @@ let size = { width: null, height: null }
 let keyWord = [
   { host: 'twitter', key: 'pbs.twimg' },
   { host: 'youtube', key: 'i.ytimg' },
+  { host: 'plurkPost', key: 'images.plurk' },
 ]
 
 function reSetSize(size) {
@@ -43,7 +44,7 @@ $(bodyDom)
   )
   .on(
     'mouseenter',
-    '.ex_link.pictureservices , .ex_link.meta > img, a.ogvideo > img',
+    '.ex_link.pictureservices > img , .ex_link.meta > img, a.ogvideo > img',
     function (e) {
       if (
         $('.cbox_left .img-holder').length > 0 ||
@@ -60,12 +61,17 @@ $(bodyDom)
             break
           }
         }
+        if (!host) return true
         switch (host) {
           case 'twitter':
             src = e.target.src.replace(':large', ':medium')
             break
           case 'youtube':
             src = e.target.src.replace('/default', '/sddefault')
+            break
+          case 'plurkPost':
+            src = e.target.src.replace('mx_', '')
+            break
           default:
             break
         }
@@ -88,7 +94,7 @@ $(bodyDom)
   )
   .on(
     'mouseleave',
-    '.ex_link.pictureservices , .ex_link.meta > img, a.ogvideo > img',
+    '.ex_link.pictureservices > img , .ex_link.meta > img, a.ogvideo > img',
     function () {
       $('.plurkIMG-popup-wrapper.active > img').css('filter', 'blur(10px)')
       timeout = setTimeout(function () {

@@ -1,4 +1,4 @@
-# Plurk IMG viewer v0.2
+# Plurk IMG viewer v0.3.0
 
 > 最後更新日 2021/05/25
 
@@ -14,6 +14,7 @@
 
 ---
 
+- 噗浪貼文互連抓圖 >> 0527 上午已完成 plurk.com/p/網域抓圖 >> 尚有莫名的 flicr 來源
 - 使用者自訂 viewer 展開位置功能
 - 美化 popup 視窗
 
