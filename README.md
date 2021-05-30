@@ -9,18 +9,26 @@
   1. 使用者上傳到河道的圖片
   2. twitter 貼文的附圖
   3. Youtube 影片的自訂縮圖
+  4. 手動轉文的貼文附圖
 
 ## 待更新項目
 
 ---
 
-- 噗浪貼文互連抓圖 >> 0527 上午已完成 plurk.com/p/網域抓圖 >> 尚有莫名的 flicr 來源
 - 使用者自訂 viewer 展開位置功能
 - 美化 popup 視窗
 
 ## 版本紀錄
 
 ---
+
+> v0.3.1 - 20210527
+
+- 利用 onerror 處理難以判斷的噗浪圖檔副檔名邏輯 (效果可呈現但 console 可能會跳 404)
+- 原 imgs 排除條件改為\_mt 與 avatar
+- 支援 live.staticflickr.com 網域
+- 支援 plurk.com/p/ 噗浪系統轉貼附圖
+- 將 Loading 圖更換為噗浪肉骨獸
 
 > v0.3.0 - 20210526
 
@@ -44,7 +52,6 @@
 
 - 取消手動 key in 寬高，添加圖片垂直置中程式
 - 修正 object-fit，避免圖片放大
-- 加入悠白 loading 小圖 感謝 YUN (https://www.plurk.com/MP678922) 的授權
 
 ---
 

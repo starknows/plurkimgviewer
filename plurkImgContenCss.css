@@ -2,7 +2,7 @@
   position: fixed;
   border-radius: 15px;
   background: transparent;
-  transition: all 0.3s;
+  transition: all 0.4s;
 }
 .plurkIMG-popup-wrapper > img {
   object-fit: scale-down;

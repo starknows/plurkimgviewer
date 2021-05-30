@@ -18,8 +18,5 @@
       "js": ["jquery-3.6.0.slim.min.js", "plurkImgContenScript.js"],
       "css": ["plurkImgContenCss.css"]
     }
-  ],
-  "web_accessible_resources": [
-    { "resources": ["images/Loading.gif"], "matches": ["*://www.plurk.com/*"] }
   ]
 }

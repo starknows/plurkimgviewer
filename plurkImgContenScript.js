@@ -5,6 +5,7 @@ let keyWord = [
   { host: 'twitter', key: 'pbs.twimg' },
   { host: 'youtube', key: 'i.ytimg' },
   { host: 'plurkPost', key: 'images.plurk' },
+  { host: 'staticflickr', key: 'live.staticflickr.com' },
 ]
 
 function reSetSize(size) {
@@ -48,7 +49,7 @@ $(bodyDom)
     function (e) {
       if (
         $('.cbox_left .img-holder').length > 0 ||
-        e.target.src.indexOf('imgs.plurk') > 0
+        e.target.src.match(/_mt|avatar/)
       ) {
         return true
       }
@@ -72,6 +73,9 @@ $(bodyDom)
           case 'plurkPost':
             src = e.target.src.replace('mx_', '')
             break
+          case 'staticflickr':
+            src = e.target.src
+            break
           default:
             break
         }
@@ -87,6 +91,9 @@ $(bodyDom)
       $(activeViewer)
         .children('img')
         .attr('src', src)
+        .on('error', function (e) {
+          e.target.src = src.replace('.jpg', '.png')
+        })
         .on('load', function (e) {
           e.target.style.filter = 'blur(0) drop-shadow(0 0 0.5rem #333)'
         })
@@ -101,7 +108,10 @@ $(bodyDom)
         viewerAction(false)
         $('.plurkIMG-popup-wrapper')
           .children('img')
-          .attr('src', chrome.runtime?.getURL('images/Loading.gif') || null)
+          .attr(
+            'src',
+            'https://s.plurk.com/7e4fc709f1b99dc88a71d17f2df61c7b.gif'
+          )
           .css('filter', 'blur(0px)')
       }, 150)
     }
